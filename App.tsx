@@ -5,8 +5,6 @@ import * as Yup from 'yup'
 import BouncyCheckbox from 'react-native-bouncy-checkbox'
 
 
-
-//Form Validation
 const PasswordSchema = Yup.object().shape({
   passwordLength: Yup.number()
     .min(4, 'Should be min of 4 characters')
@@ -132,7 +130,7 @@ const App = () => {
                   <Text style={styles.heading}>Include UpperCase Letters</Text>
                   <BouncyCheckbox
                     disableBuiltInState
-                    isChecked={lowerCase}
+                    isChecked={upperCase}
                     onPress={() => setUpperCase(!upperCase)}
                     fillColor='#FED85D'
                   />
@@ -141,16 +139,16 @@ const App = () => {
                   <Text style={styles.heading}>Include Numbers</Text>
                   <BouncyCheckbox
                     disableBuiltInState
-                    isChecked={lowerCase}
+                    isChecked={numbers}
                     onPress={() => setNumbers(!numbers)}
-                    fillColor='#C9A0DC'
+                    fillColor='#42bcf5'
                   />
                 </View>
                 <View style={styles.inputWrapper}>
                   <Text style={styles.heading}>Include Symbols</Text>
                   <BouncyCheckbox
                     disableBuiltInState
-                    isChecked={lowerCase}
+                    isChecked={symbols}
                     onPress={() => setSymbols(!symbols)}
                     fillColor='#C9A0DC'
                   />
